@@ -1,0 +1,46 @@
+package in.swiggy.pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class FoodPage {
+
+	WebDriverWait wait;
+
+	@FindBy(xpath = "(//div[@class='_1RPOp'])[1]")
+	private WebElement add;
+
+	@FindBy(xpath = "//button[@class='_1gPB7']")
+	private WebElement checkout;
+
+	@FindBy(xpath = "(//span[@class='_1X1xw'])[1]")
+	private WebElement firstItem;
+
+	public FoodPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	}
+
+	public void clickAdd() {
+		wait.until(ExpectedConditions.visibilityOf(add));
+		add.click();
+		wait.until(ExpectedConditions.visibilityOf(close));
+
+		if (close != null)
+			close.click();
+
+	}
+
+	public void clickCheckout() {
+		wait.until(ExpectedConditions.visibilityOf(checkout));
+		checkout.click();
+	}
+
+}

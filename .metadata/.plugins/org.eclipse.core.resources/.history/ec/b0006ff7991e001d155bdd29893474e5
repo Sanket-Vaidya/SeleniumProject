@@ -1,0 +1,13 @@
+package PhaseTwoProject.SwiggyWithCucumber;
+
+import io.cucumber.java.Before;
+
+public class BeforeAfter extends Tools {
+	@Before
+	public void startchrome() {
+		Driver.init();
+		driver.manage().window().maximize();
+		driver.get("https://www.swiggy.com/");
+	}
+
+}

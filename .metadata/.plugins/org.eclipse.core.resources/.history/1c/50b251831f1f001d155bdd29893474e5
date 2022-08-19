@@ -1,0 +1,11 @@
+package in.swiggy.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Checkout {
+	
+	@FindBy(xpath="//span[@class='_2EQ3T']")
+	private WebElement secureCheckout;
+
+}

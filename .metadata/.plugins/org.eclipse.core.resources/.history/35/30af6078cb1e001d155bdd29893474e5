@@ -1,0 +1,25 @@
+package in.swiggy.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class LandingPage {
+	
+	@FindBy(xpath="//input[contains(@id,'location')]")
+	private WebElement dropdown;
+	
+	Select dropdownitems;
+	
+	public LandingPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void enterLocation() {
+		dropdownitems=new Select(dropdown);
+		dropdownitems.selectByVisibleText("Bangalore, Karnataka, India");
+	}
+
+}

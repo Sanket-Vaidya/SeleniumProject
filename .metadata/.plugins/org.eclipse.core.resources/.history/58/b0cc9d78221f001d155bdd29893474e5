@@ -1,0 +1,16 @@
+package PhaseTwoProject.SwiggyWithCucumber;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(features="Feature",
+			glue="PhaseTwoProject.SwiggyWithCucumber"
+			//dryRun=true
+			)
+	
+	public class TestRunner extends AbstractTestNGCucumberTests{
+		
+	}
+	
+
+

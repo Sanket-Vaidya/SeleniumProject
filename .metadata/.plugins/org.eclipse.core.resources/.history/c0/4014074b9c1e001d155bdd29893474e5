@@ -1,0 +1,10 @@
+package PhaseTwoProject.SwiggyWithCucumber;
+
+public class Driver extends Tools {
+	
+	public static void init() {
+		System.setProperty("webdriver.chrome.driver", "resources//chromedriver.exe");
+		
+	}
+
+}

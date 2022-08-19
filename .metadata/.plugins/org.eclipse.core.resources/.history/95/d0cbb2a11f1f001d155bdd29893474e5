@@ -1,0 +1,18 @@
+package in.swiggy.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Checkout {
+	
+	@FindBy(xpath="//span[@class='_2EQ3T']")
+	private WebElement secureCheckout;
+	
+	public Checkout(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+			
+	}
+
+}

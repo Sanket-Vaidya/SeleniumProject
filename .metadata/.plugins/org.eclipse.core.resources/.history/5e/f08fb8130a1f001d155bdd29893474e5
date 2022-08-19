@@ -1,0 +1,18 @@
+package PhaseTwoProject.SwiggyWithCucumber;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import in.swiggy.pages.LandingPage;
+
+public class Driver extends Tools {
+	
+	public static LandingPage landingpage;
+	
+	public static void init() {
+		System.setProperty("webdriver.chrome.driver", "resources//chromedriver.exe");
+		driver=new ChromeDriver();
+		landingpage=new LandingPage(driver);
+		
+	}
+
+}
